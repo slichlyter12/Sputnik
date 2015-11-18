@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+	<title>CS361-GroupAssign</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="container">
+        <form id="input_form"  method="POST" name="input" action="databse.php"> 
+			<h1>Donate Info:</h1>             
+			<input type="text" id="cmpy_nm" autocomplete="off" name="company" placeholder="company name" class="input">
+			<input type="number" id="donation" autocomplete="off" placeholder="donation amount" class="input">
+			<div id="error"></div>
+			<br><br>
+			<input id="logbtn" type="submit" value="Donate!" onclick="login_in()" class="btn"> 
+        </form>                                    
+    </div>
+</body>
+
+</html>
