@@ -14,7 +14,7 @@
       <ul class="nav navbar-nav">
         <li><a href="#">View Companies</a></li>
         <li><a href="#">Track Donations</a></li>
-		<li><a href="donate.html">Donate Now</a></li>
+		<li><a href="donate.php">Donate Now</a></li>
       </ul>
 	  <form class="navbar-form navbar-right" role="form">
 		<div class="form-group">
