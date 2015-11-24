@@ -7,12 +7,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	  <a class="navbar-brand" href="#">Donate Central</a>
+	  <a class="navbar-brand" href="index.php">Donate Central</a>
     </div>
   
     <div class="collapse navbar-collapse" id="menu">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
         <li><a href="#">View Companies</a></li>
         <li><a href="#">Track Donations</a></li>
 		<li><a href="donate.html">Donate Now</a></li>
