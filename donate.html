@@ -10,6 +10,8 @@
 </head>
 
 <body style="background-color: #E8E8E8">
+
+<!-- Header end -->
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -20,12 +22,9 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="#">View Companies</a></li>
         <li><a href="#">Track Donations</a></li>
-		<li class="active"><a href="#">Donate Now</a></li>
+		<li class="active"><a href="#">Donate Now</a></li>        <!-- Allow guest to donate? -->
       </ul>
     </div>
-
-
-<!-- Allow guest to donate? -->
 	<div style ="float: right; margin-top:7px;">
 		<form class="form-inline" role="form">
 		<div class="form-group">
@@ -41,35 +40,48 @@
 	</div>
   </div>
 </nav>
-
+<!-- Header end -->
 
 <div class="container well" style="width: 500px; height: 550px;">
   <h1 style="text-align: center; margin: 20px">Donate Now</h1>
   <form role="form">
-    <div class="form-group" style="margin-top:30px">
-      <label for="text">Donate To</label>
+    <div class="form-group" style="margin-top:25px;">
+      <label for="text">Donate To:</label>
       <input type="text" class="form-control input-lg" id="text" placeholder="Charity Company/Organization">
-    </div>
-	
-	<div class="dropdown"; style="margin-top:30px">
-    <button class="btn btn-default dropdown-toggle btn-lg" type="button" data-toggle="dropdown">Donation Type <span class="caret"></span></button>
-   	<ul class="dropdown-menu">
-      	<li><a href="#">Money</a></li>
-      	<li><a href="#">Food</a></li>
-   		<li><a href="#">Equipment</a></li>
-   		<li><a href="#">Others</a></li>
-    </ul>
-  	</div>
+    </div>  
 
-	<div class="form-group" style="margin-top:30px">
-      <label for="number">Amount of Donation</label>
-      <input type="number" class="form-control input-lg" id="text">
+    <div class="form-group" style="margin-top:25px"> 
+      <label for="text">Donate Type:</label>
+      <div class="form-group row">
+        <div class="col-sm-7">
+        <select id="company" class="form-control input-lg">
+          <option>Money</option>        <!-- add payment method -->
+          <option>Food</option>         <!-- amount? -->
+          <option>Equipment</option>
+          <option>Others</option>       <!-- promte input? -->
+          </select> 
+        </div>
+        <div class="col-md-5">
+          <input type="number" class="form-control input-lg" id="amount" placeholder="Amount">
+        </div>
+      </div> 
     </div>
 
+    <div class="form-group" style="margin-top:25px">
+     <label for="Comment">Comment:</label>
+     <textarea class="form-control" rows="3" id="comment"></textarea>
+    </div>  
 
     <button type="submit" class="btn btn-warning input-lg" style="width:100%; margin-top:50px"><span style="font-size: 22px;">Donate!</span></button>
   </form>
 </div>
+
+
+<script type="text/javascript">
+
+</script>
+
+
 
 
 </body>
