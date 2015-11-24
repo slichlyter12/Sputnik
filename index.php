@@ -5,26 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<style>
-	.navbar {
-      margin-bottom: 0;
-	}
-	
-	.jumbotron {
-		position: absolute;
-		top: 39%;
-		left: 25%;
-		width: 50%;
-		opacity: 0.90;
-		z-index: 50;
-	}
-		
-</style>
 
 <?php include_once "header.php"; ?>
 
@@ -33,7 +18,7 @@
 		<div class="center-text">
 			<h1>Donate Central</h1>
 			<p>Keeping you connected to charities.</p>
-			<p><a class="btn btn-primary btn-lg" href="#" role="button">Donate Now</a></p>
+			<p><a class="btn btn-primary btn-lg" href="donate.php" role="button">Donate Now</a></p>
 		</div>
 	</div>
 </div>

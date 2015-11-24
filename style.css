@@ -1,0 +1,27 @@
+body {
+	background-color: #E8E8E8;
+}
+
+.container{
+	/*background-image: linear-gradient(#F8F8F8,transparent);*/
+	background-color: #F8F8F8;
+	width: 500px;
+	height: 600px;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar .btn-primary {
+	border: none;
+}
+
+.jumbotron {
+	position: absolute;
+	top: 39%;
+	left: 25%;
+	width: 50%;
+	opacity: 0.90;
+	z-index: 50;
+}
