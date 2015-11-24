@@ -14,6 +14,7 @@
 	.navbar {
       margin-bottom: 0;
 	}
+	
 	.jumbotron {
 		position: absolute;
 		top: 39%;
@@ -21,6 +22,7 @@
 		width: 50%;
 		opacity: 0.90;
 		z-index: 50;
+	}
 		
 </style>
 
