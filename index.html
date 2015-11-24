@@ -11,11 +11,17 @@
 <body>
 
 <style>
-	.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	.navbar {
+      margin-bottom: 0;
 	}
+	.jumbotron {
+		position: absolute;
+		top: 39%;
+		left: 25%;
+		width: 50%;
+		opacity: 0.90;
+		z-index: 50;
+		
 </style>
 
 <nav class="navbar navbar-default">
@@ -32,8 +38,8 @@
       </ul>
     </div>
 	
-	<div style ="float: right">
-		<form class="form-inline" role="form">
+	<div>
+		<form class="navbar-form navbar-right" role="form">
 		<div class="form-group">
 		  <label for="email">Email:</label>
 		  <input type="email" class="form-control" id="email" placeholder="Enter email">
@@ -48,6 +54,16 @@
   </div>
 </nav>
 
+<div class="container">
+	<div class="jumbotron">
+		<div class="center-text">
+			<h1>Donate Central</h1>
+			<p>Keeping you connected to charities.</p>
+			<p><a class="btn btn-primary btn-lg" href="#" role="button">Donate Now</a></p>
+		</div>
+	</div>
+</div>
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -56,18 +72,11 @@
 
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="http://www.collegestartup.org/wp-content/uploads/2013/09/charity-water-photo.jpg" alt="Water" width="100%" height="auto">
-        <div class="carousel-caption">
-          <h3>Water Charity</h3>
-        </div>      
+        <img src="http://www.collegestartup.org/wp-content/uploads/2013/09/charity-water-photo.jpg" alt="Water" width="100%" height="auto">    
       </div>
 
       <div class="item">
-        <img src="https://redcrossresults.files.wordpress.com/2012/06/dsc_89092.jpg" alt="Red Cross" width="100%" height="auto">
-        <div class="carousel-caption">
-          <h3>Red Cross Charity</h3>
-          <p></p>
-        </div>      
+        <img src="https://redcrossresults.files.wordpress.com/2012/06/dsc_89092.jpg" alt="Red Cross" width="100%" height="auto">   
       </div>
 
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -102,14 +111,11 @@ $(document).ready(function(){
 });
 </script>
 
-  <div class="container text-center">
-    <h1>Donate Now</h1>      
-  </div>
 
 
 
 
-<!-- TO DO: Add center "donate now" bar, link to real pages, create about info/page -->
+<!-- TO DO: link to real pages, create about info/page -->
 
 
 </body>
