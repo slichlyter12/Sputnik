@@ -1,22 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
-	<title>CS361-GroupAssign</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="style.css">
+<head>
+  <title>CS 361 Group Assignment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-	<div id="container">
-        <form id="input_form"  method="POST" name="input" action="databse.php"> 
-			<h1>Donate Info:</h1>             
-			<input type="text" id="cmpy_nm" autocomplete="off" name="company" placeholder="company name" class="input">
-			<input type="number" id="donation" autocomplete="off" placeholder="donation amount" class="input">
-			<div id="error"></div>
-			<br><br>
-			<input id="logbtn" type="submit" value="Donate!" onclick="login_in()" class="btn"> 
-        </form>                                    
+<body style="background-color: #E8E8E8">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Donate Central</a>
     </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">View Companies</a></li>
+        <li><a href="#">Track Donations</a></li>
+		<li class="active"><a href="#">Donate Now</a></li>
+      </ul>
+    </div>
+
+
+<!-- Allow guest to donate? -->
+	<div style ="float: right; margin-top:7px;">
+		<form class="form-inline" role="form">
+		<div class="form-group">
+		  <label for="email">Email:</label>
+		  <input type="email" class="form-control" id="email" placeholder="Enter email">
+		</div>
+		<div class="form-group">
+		  <label for="pwd">Password:</label>
+		  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+		</div>
+		<button type="submit" class="btn btn-default">Login</button>
+	  </form>
+	</div>
+  </div>
+</nav>
+
+
+<div class="container well" style="width: 500px; height: 550px;">
+  <h1 style="text-align: center; margin: 20px">Donate Now</h1>
+  <form role="form">
+    <div class="form-group" style="margin-top:30px">
+      <label for="text">Donate To</label>
+      <input type="text" class="form-control input-lg" id="text" placeholder="Charity Company/Organization">
+    </div>
+	
+	<div class="dropdown"; style="margin-top:30px">
+    <button class="btn btn-default dropdown-toggle btn-lg" type="button" data-toggle="dropdown">Donation Type <span class="caret"></span></button>
+   	<ul class="dropdown-menu">
+      	<li><a href="#">Money</a></li>
+      	<li><a href="#">Food</a></li>
+   		<li><a href="#">Equipment</a></li>
+   		<li><a href="#">Others</a></li>
+    </ul>
+  	</div>
+
+	<div class="form-group" style="margin-top:30px">
+      <label for="number">Amount of Donation</label>
+      <input type="number" class="form-control input-lg" id="text">
+    </div>
+
+
+    <button type="submit" class="btn btn-warning input-lg" style="width:100%; margin-top:50px"><span style="font-size: 22px;">Donate!</span></button>
+  </form>
+</div>
+
+
 </body>
 
 </html>
