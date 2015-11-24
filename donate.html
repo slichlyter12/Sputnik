@@ -60,28 +60,24 @@
   <form role="form">
     <div class="form-group" style="margin-top:30px;">
       <label for="text">Donate To:</label>
-      <input type="text" class="form-control input-lg" id="text" placeholder="Charity Company/Organization">
+        <select id="company" class="form-control input-lg">
+          <option>Compnay Name</option>        <!-- add payment method -->
+        </select> 
     </div>  
 
     <div class="form-group" style="margin-top:30px"> 
       <label for="text">Donate Type:</label>
       <div class="form-group row">
         <div class="col-sm-7">
-        <select id="company" class="form-control input-lg">
+        <select id="type" class="form-control input-lg">
           <option>Money</option>        <!-- add payment method -->
-          <option>Food</option>         <!-- amount? -->
-          <option>Equipment</option>
-          <option>Others</option>       <!-- promte input? -->
+          <option>Equipment</option>         <!-- amount? -->
           </select> 
         </div>
+
         <div class="col-md-5">
           <input type="number" class="form-control input-lg" id="amount" placeholder="Amount">
         </div>
-		<div class="form-group" style="margin-top:60px">
-			<div class="col-sm-12">
-				<label><input type="checkbox" value="">Remain Anonymous</label>
-			</div>
-		</div>
       </div> 
     </div>
 
@@ -90,7 +86,12 @@
      <textarea class="form-control" rows="3" id="comment"></textarea>
     </div>  
 
-    <button type="submit" class="btn btn-warning input-lg" style="width:100%; margin-top:40px"><span style="font-size: 22px;">Donate!</span></button>
+<!--  check login user or anonymous 
+    <div class="form-group" style="margin-top:50px">
+        <label><input type="checkbox" value="">Remain Anonymous</label>
+    </div>
+-->
+    <button type="submit" class="btn btn-warning input-lg" style="width:100%; margin-top:60px"><span style="font-size: 22px;">Donate!</span></button>
   </form>
 </div>
 
