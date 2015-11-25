@@ -16,8 +16,8 @@
 <!-- Header end -->
 
 <body>
-	<div class="container">
-    <h2 style="text-align: center; margin:40px">Create Account</h2>
+	<div id="donate_container">
+    	<h2 style="text-align: center; margin:40px">Create Account</h2>
     	<form role="form">
         <!-- user real name START-->
         <div class="form-group" style="margin-top:20px">
