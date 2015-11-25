@@ -19,7 +19,7 @@
       <?php
 	      
 	      if (isset($_SESSION["username"])) {
-		      echo "<p class='navbar-text navbar-right' id='logged-in'>Signed in as <a href='#' class='navbar-link'>".$_SESSION["username"]."</a> | <a href='logout.php' class='navbar-link'>Logout</a></p>";
+		      echo "<p class='navbar-text navbar-right' id='logged-in'>Signed in as <a href='user_profiles.php' class='navbar-link'>".$_SESSION["username"]."</a> | <a href='logout.php' class='navbar-link'>Logout</a></p>";
 	      } else {
 		      echo "
 				<form class='navbar-form navbar-right' role='form' method='post'>

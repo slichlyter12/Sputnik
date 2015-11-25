@@ -31,7 +31,7 @@
 			//redirect user to index
 			header("Location: index.php");
 		} else {
-			echo "<h1 class='error'>Username/Password doesn't match<br>Would you like to <a href='register.php'>register</a>?</h1>";
+			echo "<div class='alert alert-danger'>Username/Password doesn't match. Please try again or <a href='signup.php'>sign up</a>.</div>";
 		}
 		
 		$mysqli->close();

@@ -5,8 +5,10 @@ body {
 #donate-container {
 	margin-top:10px;
 	background-color: #F8F8F8;
-	width: 500px;
-	height: 600px;
+	width: 80%;
+	max-width: 590px;
+	padding-bottom: 20px;
+	height: auto;
 }
 
 .navbar {
