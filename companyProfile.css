@@ -1,0 +1,30 @@
+#background {
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1;
+}
+
+
+
+#textbox {
+  position: absolute;
+    right: 10%;
+	top: 20%;
+    width: 40%;
+	height: 70%;
+    padding: 10px;
+    z-index: 0;
+	text-align: center;
+	opacity: .9;
+}
+
+
+
+
+.stretch {
+    width:auto%;
+    height:100%;
+}
