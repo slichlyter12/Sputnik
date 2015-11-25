@@ -13,7 +13,7 @@
 <body>
 
 <?php include_once "header.php"; ?>
-<?php include_once('db_connect.php'); ?>
+<?php include_once('dbconnect.php'); ?>
 
 <div class="container" id="donate-container">
   <h2 style="text-align: center; margin:40px">Donate Now</h2>
@@ -24,10 +24,12 @@
         <select name="company" class="form-control input-lg">
           <!-- <option>Compnay Name</option>         add payment method -->
           <?php
-            $sql = "SELECT name FROM charity ";   //seek compnay name
-            $result = mysqli_query($mysqli, $sql);
-            $row = mysqli_fetch_row($result);
-            echo "<option>".$row[1]."</option>";
+            $sql = "SELECT name FROM charity";   //seek compnay name
+            if ($result = mysqli_query($mysqli, $sql)) {
+	            while ($row = mysqli_fetch_row($result)) {
+		            echo "<option>".$row[0]."</option>";
+	            }
+            }
           ?>
         </select> 
     </div>  

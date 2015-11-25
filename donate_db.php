@@ -1,7 +1,7 @@
 <?php
     error_reporting(E_ALL);
     session_start();
-    include('db_connect.php');
+    include('dbconnect.php');
 //################## Get User ID ##################
     if(!isset($_SESSION['uid']))     //check user id session exist?
       $_SESSION['uid'] = NULL;       //change to NULL(guest)
