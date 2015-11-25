@@ -14,8 +14,13 @@
 
 <?php include_once "header.php"; ?>
 
+<<<<<<< HEAD
 <div class="container" id="donate-container">
   <h1 style="text-align: center; margin-top: 50px">Donate Now</h1>
+=======
+<div class="container">
+  <h2 style="text-align: center; margin:40px">Donate Now</h2>
+>>>>>>> a3cd221351657623c28cdfa2951215639c5897dd
   <form role="form">
     <div class="form-group" style="margin-top:30px;">
       <label for="text">Donate To:</label>
@@ -50,7 +55,7 @@
         <label><input type="checkbox" value="">Remain Anonymous</label>
     </div>
 -->
-    <button type="submit" class="btn btn-warning input-lg" style="width:100%; margin-top:60px"><span style="font-size: 22px;">Donate!</span></button>
+    <button type="submit" class="btn btn-warning input-lg" style="width:100%; margin-top:40px"><span style="font-size: 22px;">Donate!</span></button>
   </form>
 </div>
 
