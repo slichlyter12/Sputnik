@@ -1,8 +1,3 @@
-<?php
-	
-	session_start();
-	
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,21 +16,33 @@
 
 <div class="container" id="donate-container">
   <h2 style="text-align: center; margin:40px">Donate Now</h2>
-  <form role="form">
+
+  <form method="POST" id="donate" action="donate_db.php">   <!-- Post here !!!-->
     <div class="form-group" style="margin-top:30px;">
-      <label for="text">Donate To:</label>
+      <label>Donate To:</label>
         <select id="company" class="form-control input-lg">
-          <option>Compnay Name</option>        <!-- add payment method -->
+          <!-- <option>Compnay Name</option>         add payment method -->
+          <?php 
+            include('db_connect.php');
+            $sql = "SELECT name FROM charity";   //seek compnay name
+            $result = mysql_query($mysqli, $sql);
+            if (mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)) {
+                echo "<option>".$row["name"]."</option>";
+              }
+            }
+            mysqli_close($mysqli);  //not sure put here or not
+          ?>
         </select> 
     </div>  
 
     <div class="form-group" style="margin-top:30px"> 
-      <label for="text">Donate Type:</label>
+      <label>Donate Type:</label>
       <div class="form-group row">
         <div class="col-sm-7">
         <select id="type" class="form-control input-lg">
           <option>Money</option>        <!-- add payment method -->
-          <option>Equipment</option>         <!-- amount? -->
+          <option>Equipment</option>         <!-- Not Yet Implemented ! -->
           </select> 
         </div>
 
@@ -46,7 +53,7 @@
     </div>
 
     <div class="form-group" style="margin-top:30px">
-     <label for="Comment">Comment:</label>
+     <label>Comment:</label>
      <textarea class="form-control" rows="3" id="comment"></textarea>
     </div>  
 
