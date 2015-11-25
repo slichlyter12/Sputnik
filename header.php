@@ -16,16 +16,27 @@
         <li><a href="#">Track Donations</a></li>
 		<li><a href="donate.php">Donate Now</a></li>
       </ul>
-	  <form class="navbar-form navbar-right" role="form">
-		<div class="form-group">
-		  <input type="username" class="form-control" name="username" placeholder="Username">
-		</div>
-		<div class="form-group">
-		  <input type="password" class="form-control" name="password" placeholder="Password">
-		</div>
-		<button type="submit" class="btn btn-default">Login</button><!--White button-->
-		<a href="signup.php" class="btn btn-primary" role="button">Sign Up</a>
-	  </form>
+      <?php
+	      
+	      if (isset($_SESSION["username"])) {
+		      echo "<p class='navbar-text navbar-right' id='logged-in'>Signed in as <a href='#' class='navbar-link'>".$_SESSION["username"]."</a> | <a href='logout.php' class='navbar-link'>Logout</a></p>";
+	      } else {
+		      echo "
+				<form class='navbar-form navbar-right' role='form' method='post'>
+					<div class='form-group'>
+						<input type='username' class='form-control' name='username' placeholder='Username'>
+					</div>
+					<div class='form-group'>
+						<input type='password' class='form-control' name='password' placeholder='Password'>
+					</div>
+					<button type='submit' class='btn btn-default'>Login</button><!--White button-->
+					<a href='signup.php' class='btn btn-primary' role='button'>Sign Up</a>
+				</form>
+				";
+	      }
+	      
+	    ?>
+	  
 	</div>
   </div>
 </nav>

@@ -25,3 +25,7 @@ body {
 	opacity: 0.90;
 	z-index: 50;
 }
+
+#logged-in {
+	padding-right: 10px;
+}

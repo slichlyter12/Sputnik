@@ -6,11 +6,10 @@
 		
 		include_once 'dbconnect.php';
 
-		// GET USERNAME AND PASSWORD		
+		// SANITIZE USERNAME AND PASSWORD		
 		$username = strip_tags($_POST["username"]);
 		$password = strip_tags($_POST["password"]);
 		
-		// SANITIZE USERNAME AND PASSWORD
 		$username = mysqli_real_escape_string($mysqli, $username);
 		$password = mysqli_real_escape_string($mysqli, $password);
 		
@@ -24,7 +23,7 @@
 		$active = $row[3];
 		
 		//validate username/password
-		if ($active == 1 && $username == $dbusername && password_verify($password."sputnik", $dbpassword)) {
+		if ($active == 1 && $username == $dbusername && password_verify($password."sputnik11", $dbpassword)) {
 			//set session variables
 			$_SESSION["username"] = $username;
 			$_SESSION["uid"] = $uid;
