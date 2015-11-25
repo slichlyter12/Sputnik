@@ -2,6 +2,8 @@
 	
 	session_start();
 	
+	include_once 'dbconnect.php';
+	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,23 +48,65 @@
       </tr>
     </thead>
     <tbody>
-      <tr color="#FFFFFF">
-        <td>9/11/2001</td>
-        <td>12345</td>
-        <td>$100</td>
-		<td>Sam Lichlyter Trust Fund</td>
-        <td>Yes</td>
-        <td>Money given to Sam as he vacations in Hawaii</td>
-      </tr>
-      <tr>
-        <td>4/20/2015</td>
-        <td>54321</td>
-        <td>$69</td>
-		<td>Weed Inc.</td>
-        <td>No</td>
-        <td>Not blazed yet</td>
-      </tr>
-     
+	    <?php 
+		    
+		    if (isset($_SESSION["uid"])) {
+			    
+			    $uid = $_SESSION["uid"];
+			    $query = "SELECT donated_on, mid, amount, cid, spent, status FROM money WHERE uid=$uid";
+				
+				if ($result = mysqli_query($mysqli, $query)) {
+					while ($row = mysqli_fetch_row($result)) {
+						
+						// get charity name
+						$charity_query = "SELECT name FROM charity WHERE cid=".$row[3];
+						if ($charity_result = mysqli_query($mysqli, $charity_query)) {
+							while ($charity_row = mysqli_fetch_row($charity_result)) {
+								$charity_name = $charity_row[0];
+							}
+						}
+						
+						// create human readable spent status
+						$spent = "No";
+						switch ($row[4]) {
+							case 0:
+								$spent = "No";
+								break;
+							case 1:
+								$spent = "Yes";
+								break;
+							default: 
+								$spent = "No";
+								break;
+						}
+						
+						// get status
+						if ($row[5] == NULL) {
+							$status = "No status available";
+						} else {
+							$status = $row[5];
+						}
+						
+						// get date
+						date_default_timezone_set('America/Los_Angeles');
+						$date = date("m/d/Y", $row[0]);
+						
+						// print results
+						echo "
+							<tr color='#FFFFFF'>
+							<td>".$date."</td>
+							<td>".$row[1]."</td>
+							<td>$".$row[2]."</td>
+							<td>".$charity_name."</td>
+							<td>".$spent."</td>
+							<td>".$status."</td>
+							</tr>
+						";
+					}
+				}
+
+		    }		    
+		?>
     </tbody>
   </table>
 </div>
