@@ -24,7 +24,7 @@
 		  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
 		</div>
 		<button type="submit" class="btn btn-default">Login</button><!--White button-->
-		<button type="submit" class="btn btn-primary">Sign Up</button><!--Blue button-->
+		<a href="signup.php" class="btn btn-primary" role="button">Sign Up</a>
 	  </form>
 	</div>
   </div>

@@ -3,7 +3,7 @@ body {
 }
 
 .container{
-	/*background-image: linear-gradient(#F8F8F8,transparent);*/
+	margin-top:10px;
 	background-color: #F8F8F8;
 	width: 500px;
 	height: 600px;
