@@ -18,10 +18,10 @@
       </ul>
 	  <form class="navbar-form navbar-right" role="form">
 		<div class="form-group">
-		  <input type="email" class="form-control" id="email" placeholder="Enter email">
+		  <input type="username" class="form-control" name="username" placeholder="Username">
 		</div>
 		<div class="form-group">
-		  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+		  <input type="password" class="form-control" name="password" placeholder="Password">
 		</div>
 		<button type="submit" class="btn btn-default">Login</button><!--White button-->
 		<button type="submit" class="btn btn-primary">Sign Up</button><!--Blue button-->

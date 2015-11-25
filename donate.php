@@ -14,7 +14,7 @@
 
 <?php include_once "header.php"; ?>
 
-<div class="container">
+<div class="container" id="donate-container">
   <h1 style="text-align: center; margin-top: 50px">Donate Now</h1>
   <form role="form">
     <div class="form-group" style="margin-top:30px;">

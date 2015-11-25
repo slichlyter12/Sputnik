@@ -1,3 +1,44 @@
+<?php 
+	
+	session_start();
+	
+	if (isset($_POST["username"])) {
+		
+		include_once 'dbconnect.php';
+
+		// GET USERNAME AND PASSWORD		
+		$username = strip_tags($_POST["username"]);
+		$password = strip_tags($_POST["password"]);
+		
+		// SANITIZE USERNAME AND PASSWORD
+		$username = mysqli_real_escape_string($mysqli, $username);
+		$password = mysqli_real_escape_string($mysqli, $password);
+		
+		// QUERY DATABASE
+		$sql = "SELECT uid, username, password, active FROM users WHERE username='$username' LIMIT 1";
+		$query = mysqli_query($mysqli, $sql);
+		$row = mysqli_fetch_row($query);
+		$uid = $row[0];
+		$dbusername = $row[1];
+		$dbpassword = $row[2];
+		$active = $row[3];
+		
+		//validate username/password
+		if ($active == 1 && $username == $dbusername && password_verify($password."sputnik", $dbpassword)) {
+			//set session variables
+			$_SESSION["username"] = $username;
+			$_SESSION["uid"] = $uid;
+			
+			//redirect user to index
+			header("Location: index.php");
+		} else {
+			echo "<h1 class='error'>Username/Password doesn't match<br>Would you like to <a href='register.php'>register</a>?</h1>";
+		}
+		
+		$mysqli->close();
+	}
+	
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

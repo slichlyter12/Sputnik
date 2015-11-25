@@ -2,7 +2,7 @@ body {
 	background-color: #E8E8E8;
 }
 
-.container{
+#donate-container {
 	/*background-image: linear-gradient(#F8F8F8,transparent);*/
 	background-color: #F8F8F8;
 	width: 500px;
