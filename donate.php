@@ -97,7 +97,7 @@
 					<label>Comment:</label>
 					<textarea class="form-control" rows="3" name="comment"></textarea>
 				</div>  
-				
+				<div class="alert alert-warning" role="alert">Note: If you are not logged in your donation will be marked as anonymous.</div>
 				<button type="submit" class="btn btn-warning input-lg" style="width:100%; margin-top:40px"><span style="font-size: 22px;">Donate!</span></button>
 			</form>
 		</div>

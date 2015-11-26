@@ -12,7 +12,7 @@
   
     <div class="collapse navbar-collapse" id="menu">
       <ul class="nav navbar-nav">
-        <li><a href="#">View Companies</a></li>
+        <li><a href="view_companies.php">View Companies</a></li>
         <li><a href="#">Track Donations</a></li>
 		<li><a href="donate.php">Donate Now</a></li>
       </ul>
