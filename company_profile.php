@@ -5,7 +5,7 @@
 	include_once 'dbconnect.php';
 	
 	if (!isset($_GET["id"])) {
-		echo "<div class='alert alert-danger' role='alert'>This is not the charity you're looking for</div>";
+		echo "<div class='alert alert-danger' role='alert'>This is not the charity you're looking for.</div>";
 	} else {
 		$cid = mysqli_real_escape_string($mysqli, strip_tags($_GET["id"]));
 	}
