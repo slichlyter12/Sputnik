@@ -49,6 +49,15 @@
 		<div class="well" id="textbox">
 			<h1><?php echo $name; ?></h1>
 			<p><?php echo $description; ?></p>
+			
+			<form role="form">
+				<div class="form-group">
+					<div class="col-xs-6">
+						<label for="zip"><strong>Enter ZIP code to see amount donated to <?php echo $name; ?> from that area:</strong></label>
+						<input type="text" class="form-control" id="zip">
+						<!--Output dollar amount here, Sorry Eric-->
+					</div>
+				</div>
 		</div>
 	</body>
 </html>
