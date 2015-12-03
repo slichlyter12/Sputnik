@@ -50,7 +50,7 @@
 				    
 				    if (isset($_SESSION["uid"])) {
 					    
-					    $uid = $_SESSION["uid"];
+					    $uid = mysqli_real_escape_string($mysqli, strip_tags($_SESSION["uid"]));
 					    $query = "SELECT donated_on, mid, amount, cid, spent, status FROM money WHERE uid=$uid";
 						
 						if ($result = mysqli_query($mysqli, $query)) {
