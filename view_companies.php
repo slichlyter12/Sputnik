@@ -24,7 +24,7 @@
 			<div class="row">
 				<?php
 					
-					$query = "SELECT cid, name, total_received, img_path FROM charity";
+					$query = "SELECT cid, name, total_received, img FROM charity";
 					if ($result = mysqli_query($mysqli, $query)) {
 						while ($row = mysqli_fetch_row($result)) {
 							echo "

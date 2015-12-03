@@ -3,13 +3,21 @@
 	session_start();
 	
 	include_once 'dbconnect.php';
-	
+	$money = 0;
 	if (!isset($_GET["id"])) {
 		echo "<div class='alert alert-danger' role='alert'>This is not the charity you're looking for.</div>";
 	} else {
 		$cid = mysqli_real_escape_string($mysqli, strip_tags($_GET["id"]));
 	}
-	
+	if(isset($_GET["zip"])){
+		$zip = mysqli_real_escape_string($mysqli, strip_tags($_GET["zip"]));
+		$result = mysqli_query($mysqli, "SELECT money.amount FROM charity JOIN users JOIN money WHERE charity.cid=".$cid." AND users.zip=".$zip." AND users.uid = money.uid AND charity.cid=money.cid");
+		while ($row = mysqli_fetch_row($result)) {
+		//echo "in loop";
+		$money += $row[0];
+	}
+	}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,10 +33,16 @@
 	<body>
 		<?php include_once "header.php"; ?>
 		
+		
+		
+		
+		
+		
+		
 		<!-- GET DATA FROM DATABASE -->
 		<?php
 		
-			$query = "SELECT name, total_received, total_spent, description, img_path FROM charity WHERE cid=$cid";
+			$query = "SELECT name, total_received, total_spent, description, img FROM charity WHERE cid=$cid";
 			if ($result = mysqli_query($mysqli, $query)) {
 				while ($row = mysqli_fetch_row($result)) {
 					$name = $row[0];
@@ -54,8 +68,12 @@
 				<div class="form-group">
 					<div class="col-xs-6">
 						<label for="zip"><strong>Enter ZIP code to see amount donated to <?php echo $name; ?> from that area:</strong></label>
-						<input type="text" class="form-control" id="zip">
+						<br><br>
+						<input type="text" class="form-control" id="zip" name="zip">
+						<input name="id" type="hidden" value="<?php echo $_GET["id"]; ?>">
 						<!--Output dollar amount here, Sorry Eric-->
+						<button type="submit">Submit</button>
+						<div id="div1"><h2>$<?php echo $money; ?></h2></div>
 					</div>
 				</div>
 		</div>
