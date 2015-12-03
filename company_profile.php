@@ -73,7 +73,15 @@
 						<input name="id" type="hidden" value="<?php echo $_GET["id"]; ?>">
 						<!--Output dollar amount here, Sorry Eric-->
 						<button type="submit">Submit</button>
-						<div id="div1"><h2>$<?php echo $money; ?></h2></div>
+						<div id="div1"><h2>$
+							<?php 
+								if ($money == 0 && $received != 0) {
+									echo $received; 
+								} else {
+									echo $money; 
+								} 
+							?>
+						</h2></div>
 					</div>
 				</div>
 		</div>
