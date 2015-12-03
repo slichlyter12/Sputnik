@@ -87,7 +87,8 @@
 								
 								// get date
 								date_default_timezone_set('America/Los_Angeles');
-								$date = date("m/d/Y", $row[0]);
+								$timestamp = strtotime($row[0]);
+								$date = date("m/d/Y", $timestamp);
 								
 								// print results
 								echo "
