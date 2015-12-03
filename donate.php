@@ -29,7 +29,8 @@
 	    $cid = $tmp_cid;    
 	    $amount = mysqli_real_escape_string($mysqli, strip_tags($_POST["amount"]));
 	    $sql_insert = "INSERT INTO money (uid, cid, amount) VALUES ('$uid', '$cid', '$amount')";
-	    if (mysqli_query($mysqli, $sql_insert)) {
+	    $sql_update = "UPDATE charity SET total_received = total_received + $amount WHERE cid=$cid";
+	    if (mysqli_query($mysqli, $sql_insert) && mysqli_query($mysqli, $sql_update)) {
 		    
 		    echo "<div class='alert alert-success' role='alert'>Thank you for your contribution!";
 		    if ($_SESSION["username"] != "Guest")
